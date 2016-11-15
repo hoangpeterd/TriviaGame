@@ -1,0 +1,8 @@
+/*centers text in jumbotron*/
+.container .jumbotron {
+	text-align: center;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+	width: 40%;
+}
