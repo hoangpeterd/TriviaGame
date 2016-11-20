@@ -35,10 +35,11 @@ var interval = setInterval(function() {
     
     if (minutes == 0 && seconds == 0)
         clearInterval(interval);
-		$('#timeUpModal').modal('show');
-    	$("#modalButton").click(function() {
-            $("#submitButton").click();
-        });
+  //   	Event.preventDefault ();
+		// $('#timeUpModal').modal('show');
+  //   	$("#modalButton").click(function() {
+  //           $("#submitButton").click();
+  //       });
 
 }, 1000);
 // end timer functions
