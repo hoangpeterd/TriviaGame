@@ -9,26 +9,266 @@
 </head>
 <body>
 	<!-- jumbotron used for start page-->
-	<div class="container">
+	<div class="container" id="startPage">
 		<br>
  		<div class="jumbotron">
     		<h1>Totally Trivial Trivia!</h1>
     		<br>
     		<p>
-  				<button type="button" class="btn btn-default btn-lg">Start</button>
+  				<button type="button" class="btn btn-default btn-lg" id="startButton">Start</button>
 			</p>
   		</div>
 	</div>
+	<!-- end jumbotron used for start page -->
+	
+	<!-- jumbotron used for trivia page-->
+	<div class="container" id="triviaPage">
+		<br>
+ 		<div class="jumbotron">
+    		<h1 align="text-center">Totally Trivial Trivia!</h1>
+    		<br>
+    		<p>Time Remaining: <span id="timeRemaining"></span></p>
+    		<br>
+    		<!-- trivia questions -->
+    		<!-- trivia question 01 -->
+  			<div class="container">
+  				<p>1. Is JavaScript case-sensitive?</p>
+  					<label class="radio-inline"><input type="radio" value="true" name="optradio01">Yes</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio01">No</label>
+			</div>
+			<br>
+			<!-- trivia question 02 -->
+			 <div class="container">
+  				<p>2. What will the following code return: Boolean(9 > 8)</p>
+  					<label class="radio-inline"><input type="radio" value="true" name="optradio02">True</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio02">False</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio02">NaN</label>
+			</div>
+			<br>
+			<!-- trivia question 03 -->
+			 <div class="container">
+  				<p>3. Which operator is used to assign a value to a variable?</p>
+ 
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio03">+</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio03">-</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio03">*</label>
+  					<label class="radio-inline"><input type="radio" value="true" name="optradio03">=</label>
+			</div>
+			<br>
+			<!-- trivia question 04	 -->
+			 <div class="container">
+  				<p>4. How do you declare a JavaScript variable?</p>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio04">variable dogName;</label>
+  					<label class="radio-inline"><input type="radio" value="true" name="optradio04">var dogName;</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio04">v dogName;</label>
+			</div>
+			<br>
+			<!-- trivia question 05	 -->
+			 <div class="container">
+  				<p>5. Which event occurs when the user clicks on an HTML element?</p>
+    				<label class="radio-inline"><input type="radio" value="true" name="optradio05">onclick</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio05">onchange</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio05">onmouseover</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio05">onmouseclick</label>
+			</div>
+			<br>
+			<!-- trivia question 06	 -->
+			 <div class="container">
+  				<p>6. How can you detect the client's browser name?</p>
+    				<label class="radio-inline"><input type="radio" value="false" name="optradio06">browser.name</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio06">client.navName</label>
+  					<label class="radio-inline"><input type="radio" value="true" name="optradio06">navigator.appName</label>
+			</div>
+			<br>	
+			<!-- trivia question 07	 -->
+			 <div class="container">
+  				<p>7. Javascript is the same as Java.</p>
+    				<label class="radio-inline"><input type="radio" value="false" name="optradio07">True</label>
+  					<label class="radio-inline"><input type="radio" value="true" name="optradio07">False</label>
+			</div>
+			<br>	
+			<!-- trivia question 08	 -->
+			 <div class="container">
+  				<p>8. What is the correct JavaScript syntax for opening a new window called "w2" ?</p>
+    				<label class="radio-inline"><input type="radio" value="false" name="optradio08">w2 = window.new("http://www.google.com");</label>
+  					<label class="radio-inline"><input type="radio" value="true" name="optradio08">w2 = window.open("http://www.google.com");</label>
+			</div>
+			<br>	
+			<!-- trivia question 09	 -->
+			 <div class="container">
+  				<p>9. How do you find the number with the highest value of x and y?</p>
+    				<label class="radio-inline"><input type="radio" value="false" name="optradio09">top(x,y)</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio09">ceil(x,y)</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio09">Math.cel(x,y)</label>
+  					<label class="radio-inline"><input type="radio" value="true" name="optradio09">Math.max(x,y)</label>
+			</div>
+			<br>	
+			<!-- trivia question 10	 -->
+			 <div class="container">
+  				<p>10. How do you round the number 3.14, to the nearest integer?</p>
+    				<label class="radio-inline"><input type="radio" value="false" name="optradio10">rnd(3.14)</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio10">round(3.14)</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio10">Math.rnd(3.14)</label>
+  					<label class="radio-inline"><input type="radio" value="true" name="optradio10">Math.round(3.14)</label>
+			</div>
+			<br>
+			<!-- trivia question 11	 -->
+			 <div class="container">
+  				<p>11. What is the correct way to write a JavaScript array?</p>
+    				<label class="radio-inline"><input type="radio" value="false" name="optradio11">var america = "red", "white", "blue"</label>
+  					<label class="radio-inline"><input type="radio" value="true" name="optradio11">var america = ["red", "white", "blue"]</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio11">var america = (1:"red", 2:"white", 3:"blue")</label>
+			</div>
+			<br>
+			<!-- trivia question 12	 -->
+			 <div class="container">
+  				<p>12. How can you add a comment in JavaScript?</p>
+    				<label class="radio-inline"><input type="radio" value="false" name="optradio12">\\comment</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio12">/*comment</label>
+  					<label class="radio-inline"><input type="radio" value="true" name="optradio12">//comment</label>
+			</div>
+			<br>
+			<!-- trivia question 13	 -->
+			 <div class="container">
+  				<p>13. How does a "for-loop" start?</p>
+    				<label class="radio-inline"><input type="radio" value="false" name="optradio13">for i = 1 to 7</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio13">for (i <= 7; i++)</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio13">for (i = 0; i <= 7)</label>
+  					<label class="radio-inline"><input type="radio" value="true" name="optradio13">for (i = 0; i <= 7; i++)</label>
+			</div>
+			<br>
+			<!-- trivia question 14	 -->
+			 <div class="container">
+  				<p>14. Inside which HTML element do we put the JavaScript?</p>
+    				<label class="radio-inline"><input type="radio" value="false" name="optradio14">js</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio14">style</label>
+  					<label class="radio-inline"><input type="radio" value="true" name="optradio14">script</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio14">javascript</label>
+			</div>
+			<br>
+			<!-- trivia question 15	 -->
+			 <div class="container">
+  				<p>15. How does a "while loop" start?</p>
+    				<label class="radio-inline"><input type="radio" value="true" name="optradio15">while (i <= 7)</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio15">while i = 1 to 7</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio15">while (i <= 7; i++)</label>
+			</div>
+			<br>
+			<!-- trivia question 16	 -->
+			 <div class="container">
+  				<p>16. How do you write an if statement for executing some code if "i" is not equal to 7?</p>
+    				<label class="radio-inline"><input type="radio" value="false" name="optradio16">if i <> 7</label>
+  					<label class="radio-inline"><input type="radio" value="true" name="optradio16">if (i != 7)</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio16">if (i <> 7)</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio16">if i =! 7 then</label>
+			</div>
+			<br>
+			<!-- trivia question 17	 -->
+			 <div class="container">
+  				<p>17. How to write an if statement in JavaScript?</p>
+    				<label class="radio-inline"><input type="radio" value="false" name="optradio17">if i = 7</label>
+  					<label class="radio-inline"><input type="radio" value="true" name="optradio17">if (i == 7)</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio17">if i = 7 then</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio17">if i == 7 then</label>
+			</div>
+			<br>
+			<!-- trivia question 18	 -->
+			 <div class="container">
+  				<p>18. How do you call a function named "myFunction"?</p>
+    				<label class="radio-inline"><input type="radio" value="true" name="optradio18">myFunction()</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio18">call myFunction()</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio18">call function myFunction()</label>
+			</div>
+			<br>
+			<!-- trivia question 19	 -->
+			 <div class="container">
+  				<p>19. How do you write "Hello World!" in an alert box?</p>
+    				<label class="radio-inline"><input type="radio" value="false" name="optradio19">msg("Hello World!");</label>
+  					<label class="radio-inline"><input type="radio" value="true" name="optradio19">alert("Hello World!");</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio19">msgBox("Hello World!");</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio19">msgBox("Hello World!");</label>
+			</div>
+			<br>
+			<!-- trivia question 20	 -->
+			 <div class="container">
+  				<p>20. The external JavaScript file must contain the script tag.</p>
+    				<label class="radio-inline"><input type="radio" value="false" name="optradio20">True</label>
+  					<label class="radio-inline"><input type="radio" value="true" name="optradio20">False</label>
+			</div>
+			<br>
+			<!-- trivia question 21	 -->
+			 <div class="container">
+  				<p>21. What is the correct syntax for referring to an external script called "javascript.js"?</p>
+    				<label class="radio-inline"><input type="radio" value="true" name="optradio21">script src="javascript.js</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio21">script href="javascript.js"</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio21">script name="javascript.js"</label>
+			</div>
+			<br>
+			<!-- trivia question 22	 -->
+			 <div class="container">
+  				<p>22. What is the correct JavaScript syntax to change the content of the HTML element below?</p>
+    				<label class="radio-inline"><input type="radio" value="false" name="optradio23">#demo.innerHTML = "Hello World!";</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio23">document.getElement("p").innerHTML = "Hello World!";</label>
+  					<label class="radio-inline"><input type="radio" value="false" name="optradio23">document.getElementByName("p").innerHTML = "Hello World!";</label>
+  					<label class="radio-inline"><input type="radio" value="true" name="optradio23">document.getElementById("demo").innerHTML = "Hello World!";</label>
+			</div>
+			<br>
+			<!-- submit button -->
+			<br>
+			<p>
+  				<button type="button" class="btn btn-default btn-lg" id="submitButton">Done</button>
+			</p>								
+		</div>
+	</div>
+	<!-- end jumbotron used for trivia page -->
+	
+	<!-- jumbotron used for results page-->
+	<div class="container" id="resultsPage">
+		<br>
+ 		<div class="jumbotron">
+    		<h1>Totally Trivial Trivia!</h1>
+    		<br>
+    		<p>All Done!</p>
+    		<br>
+    		<p>Correct Answers: <span id="correctAnswers"></span></p>
+    		<p>Incorrect Answers: <span id="incorrectAnswers"></span></p>
+    		<p>Unanswered: <span id="unanswered"></span></p>
+  		</div>
+	</div>
+	<!-- end jumbotron for results page -->
+	
+	<!-- modal -->
+	<div class="container">
+  		<!-- time up modal -->
+  		<div class="modal fade" id="timeUpModal" role="dialog">
+    		<div class="modal-dialog modal-sm" align="center">
+      			<div class="modal-content">
+       				 <div class="modal-header">
+          				<h4 class="modal-title">Times Up!</h4>
+        			</div>
+        			<div class="modal-body">
+          				<p>Try again.</p>
+        			</div>
+        			<div class="modal-footer">
+          			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        			</div>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+	<!-- end modal -->
+
 	<!-- footer -->
 	<footer class="footer text-center">
       <div class="container">
-      	<br>
         <p class="text-muted">&copy; Copyright 2016 Peter Hoang</p>
         <br>
       </div>
     </footer>
     <!-- linking jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- linking bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<!-- linking JS file -->
 	<script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>

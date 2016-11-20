@@ -1,8 +1,15 @@
+
+
 /*centers text in jumbotron*/
 .container .jumbotron {
 	text-align: center;
 }
 
+/*increased width of start button*/
 .btn-group-lg>.btn, .btn-lg {
 	width: 40%;
+}
+
+#triviaPage, #resultsPage{ 
+	display: none; 
 }
