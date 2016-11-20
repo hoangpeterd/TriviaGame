@@ -10,6 +10,7 @@
 	width: 40%;
 }
 
+/*hides the trivia and results page until correct buttons are pressed*/
 #triviaPage, #resultsPage{ 
 	display: none; 
 }
