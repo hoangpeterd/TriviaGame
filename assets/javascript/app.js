@@ -18,33 +18,29 @@ $("#submitButton").click(function() {
 //end hide and display divs
 
 //timer functions
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10)
-        seconds = parseInt(timer % 60, 10);
+var interval = setInterval(function() {
+    var timer = $('#timeRemaining').html();
+    timer = timer.split(':');
+    var minutes = parseInt(timer[0], 10);
+    var seconds = parseInt(timer[1], 10);
+    seconds -= 1;
+    if (minutes < 0) return clearInterval(interval);
+    if (minutes < 10 && minutes.length != 2) minutes = '0' + minutes;
+    if (seconds < 0 && minutes != 0) {
+        minutes -= 1;
+        seconds = 59;
+    }
+    else if (seconds < 10 && length.seconds != 2) seconds = '0' + seconds;
+    $('#timeRemaining').html(minutes + ':' + seconds);
+    
+    if (minutes == 0 && seconds == 0)
+        clearInterval(interval);
+		$('#timeUpModal').modal('show');
+    	$("#modalButton").click(function() {
+            $("#submitButton").click();
+        });
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.text(minutes + ":" + seconds);
-
-        // modal pops up when time runs out
-        if (--timer < 0) {
-            timer = duration;
-            $("#timeUpModal").modal("show");
-            $("#modalButton").click(function() {
-            	$("#submitButton").click();
-            });
-        }
-    }, 1000);
-}
-
-jQuery(function ($) {
-    var twoMinutes = 10,
-        display = $("#timeRemaining");
-    startTimer(twoMinutes, display);
-});
+}, 1000);
 // end timer functions
 
 //function that checks the answers
