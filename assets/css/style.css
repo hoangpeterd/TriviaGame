@@ -19,7 +19,7 @@
 	border-radius: 6px 6px 0px 0px;
 }
 
-/*allows me to vertically align the modal to my liking*/
+/*allows me to vertically align the modal to my preferences*/
 .modal {
   text-align: center;
   padding: 0!important;
@@ -28,7 +28,7 @@
 .modal:before {
   content: '';
   display: inline-block;
-  height: 71%;
+  height: 90%;
   vertical-align: middle;
   margin-right: -4px;
 }

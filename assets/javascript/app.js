@@ -12,6 +12,7 @@ $("#startButton").click(function() {
 });
 
 $("#submitButton").click(function() {
+	clearInterval(interval);
 	$("#triviaPage").hide();
 	$("#resultsPage").show();
 });
@@ -33,13 +34,13 @@ var interval = setInterval(function() {
     else if (seconds < 10 && length.seconds != 2) seconds = '0' + seconds;
     $('#timeRemaining').html(minutes + ':' + seconds);
     
-    if (minutes == 0 && seconds == 0)
+  	if (minutes == 0 && seconds == 0){
         clearInterval(interval);
-  //   	Event.preventDefault ();
-		// $('#timeUpModal').modal('show');
-  //   	$("#modalButton").click(function() {
-  //           $("#submitButton").click();
-  //       });
+        $('#timeUpModal').modal('show');
+        $("#modalButton").click(function() {
+            $("#submitButton").click();
+        });
+    }
 
 }, 1000);
 // end timer functions
@@ -60,9 +61,6 @@ function checkAnswer() {
 	$("#correctAnswers").html(correctAnswers);
 	$("#incorrectAnswers").html(incorrectAnswers);
 	$("#unanswered").html(unanswered);
-	console.log(correctAnswers);
-	console.log(incorrectAnswers);
-	console.log(unanswered);
 }
 
 $(document).on("click", "#submitButton", function(){
